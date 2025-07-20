@@ -34,10 +34,10 @@ This repository contains simulation tools and notebooks for evaluating interfere
 ### 🗺️ Mapping and Visualization
 
 - **map_and_pics.ipynb**  
-  Plots the radio map, ray tracing map, and satellite visibility map for the simulated area.
+  Plots the radio map, ray tracing map, and satellite visibility map for the simulated area. 
 
 - **Pos_for_RM.ipynb**  
-  Computes user positions and nulling vectors, serving as input to `map_and_pics.ipynb`.
+  Computes user positions and nulling vectors, serving as input to `map_and_pics.ipynb`.(In `SceneConfigSionna2.py` manually picked three TN-UEs for three sectors ), saved TN-UE postions, NTN-UE postions and Beamforming Vectors.
 
 ### 🔍 Signal Detection
 
