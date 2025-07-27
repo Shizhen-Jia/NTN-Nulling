@@ -56,6 +56,12 @@ This repository contains simulation tools and notebooks for evaluating interfere
 - [Sionna RT](https://nvlabs.github.io/sionna/)
 - NumPy, Matplotlib, Jupyter
 
+```
+python -m venv sionna_env
+source sionna_env/bin/activate
+pip install --upgrade pip tensorflow tqdm numpy matplotlib importlib_metadata sionna sionna-rt
+```  
+
 ---
 
 Let me know if you’d like me to add example outputs, formulas, or instructions for running specific notebooks.
