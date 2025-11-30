@@ -61,7 +61,7 @@ def nulling_bf(h: np.ndarray,
     """
     
     # h= ((h)*np.sqrt(tx_antennas)  /np.linalg.norm(h))
-    h = ((h) /np.linalg.norm(h))
+    # h = ((h) /np.linalg.norm(h))
     # interference_term = (interference_term) /np.linalg.norm(interference_term)
     # Build the matrix Q
     A = h @ w_r @ w_r.conj().T @ h.conj().T
