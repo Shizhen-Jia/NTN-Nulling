@@ -236,7 +236,7 @@ class SceneConfigSionna:
 
         # 3) Place NTN receivers (70% building, 30% outdoor)
         
-        num_ntn_building = int(0.8 * ntn_rx)
+        num_ntn_building = int(0.7 * ntn_rx)
         num_ntn_outdoor  = ntn_rx - num_ntn_building
 
         # 从建筑和室外候选点中随机选择
@@ -401,37 +401,8 @@ class SceneConfigSionna:
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
-    def compute_paths(self, tx_rows = 8, tx_cols = 8, tn_rx_rows = 4, tn_rx_cols = 4,max_depth=3):
+    def compute_paths(self, tx_rows = 4, tx_cols = 16, tn_rx_rows = 1, tn_rx_cols = 1,max_depth=3):
         """
         1) Configure scene frequency and remove old TX/RX
         2) Add TX, add TN array and receivers => compute TN CIR
@@ -475,8 +446,9 @@ class SceneConfigSionna:
                 tx = sionna.rt.Transmitter(
                     name=f"tx-{s}",
                     position=self.tx_pos[i],
-                    # orientation=[yaw, 0, -0.1745329252] # headdown 10 degree
-                    orientation=[yaw, -0.1745329252, 0]
+                    # orientation=[yaw, 0, -0.1745329252] # headdown 10 degree,  -0.0873
+                    # orientation=[yaw,0.0873, 0]
+                    orientation=[yaw, -0.0873 , 0]
                 )
                 self.scene.add(tx)
 
