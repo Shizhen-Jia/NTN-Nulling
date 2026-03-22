@@ -8,22 +8,22 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # Or "" for CPU only
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-import tensorflow as tf
+# import tensorflow as tf
 
-gpus = tf.config.list_physical_devices('GPU')
-if gpus:
-    try:
-        tf.config.experimental.set_memory_growth(gpus[0], True)
-        print("✅ Using GPU:", gpus[0].name)
-    except RuntimeError as e:
-        print("❌ RuntimeError:", e)
-else:
-    print("❌ No GPU available. Using CPU.")
+# gpus = tf.config.list_physical_devices('GPU')
+# if gpus:
+#     try:
+#         tf.config.experimental.set_memory_growth(gpus[0], True)
+#         print("✅ Using GPU:", gpus[0].name)
+#     except RuntimeError as e:
+#         print("❌ RuntimeError:", e)
+# else:
+#     print("❌ No GPU available. Using CPU.")
 
 import sionna
 import sionna.rt
 import numpy as np
-import tensorflow as tf
+
 # gpus = tf.config.list_physical_devices('GPU')
 # if gpus:
 #     try:
@@ -41,7 +41,7 @@ from sionna.rt import Scene,load_scene, PlanarArray, Transmitter, Receiver, Came
                       PathSolver, RadioMapSolver, subcarrier_frequencies, AntennaPattern
 # from sionna.channel import cir_to_time_channel
 # from sionna.rt.antenna import visualize
-tf.keras.backend.clear_session()
+# tf.keras.backend.clear_session()
 from scipy.special import jv
 import mitsuba as mi
 from sionna.rt.antenna_pattern import register_antenna_pattern,create_factory,PolarizedAntennaPattern
