@@ -62,5 +62,34 @@ source sionna_env/bin/activate
 pip install --upgrade pip tensorflow tqdm numpy matplotlib importlib_metadata sionna sionna-rt
 ```  
 
+## 🔁 Replace Sionna `radio_map.py`
+
+This project uses a customized version of Sionna's `radio_map.py`.
+After installing Sionna, replace the original file in the Sionna source tree:
+
+- Replace `sionna/rt/radio_map.py`
+- With this repository's `radio_map.py`
+
+The modified `radio_map.py` adds the `inr_ntn` metric for NTN interference analysis.
+Unlike the default `sinr`, `inr_ntn` treats the total received power from all base stations as interference and computes:
+
+```python
+inr_ntn = interference / noise
+```
+
+This metric can be used in radio map related evaluation and visualization workflows that accept `metric`, together with `path_gain`, `rss`, and `sinr`.
+
+If you are using a virtual environment, the Sionna file is typically located at:
+
+```bash
+<your_venv>/lib/python3.x/site-packages/sionna/rt/radio_map.py
+```
+
+You can also locate it with:
+
+```bash
+python -c "import sionna, pathlib; print(pathlib.Path(sionna.__file__).resolve().parent / 'rt' / 'radio_map.py')"
+```
+
 ---
 
