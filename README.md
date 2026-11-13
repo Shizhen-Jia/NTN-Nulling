@@ -30,6 +30,7 @@ This repository contains simulation tools and notebooks for evaluating interfere
 
 - **sionnautils/**  
   Utility functions used by `SceneConfigSionna.py` for generating grids and locating TN/NTN UEs.
+  A small acknowledgment: some utilities are adapted from material by Sundeep Rangan.
 
 ### 🗺️ Mapping and Visualization
 

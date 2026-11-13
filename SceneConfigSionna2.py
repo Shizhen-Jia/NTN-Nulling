@@ -448,7 +448,7 @@ class SceneConfigSionna:
                     position=self.tx_pos[i],
                     # orientation=[yaw, 0, -0.1745329252] # headdown 10 degree,  -0.0873
                     # orientation=[yaw,0.0873, 0]
-                    orientation=[yaw, -0.0873 , 0]
+                    orientation=[yaw, 0.0873 , 0]
                 )
                 self.scene.add(tx)
 
